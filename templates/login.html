@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <title>Dakshath | Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("{{url_for('static', filename='images/bg9.jpg')}}");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            /* background-repeat: no-repeat; */
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 980px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .left-section {
+            max-width: 500px;
+        }
+
+        .left-section h1 {
+            color: #1877f2;
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        .left-section p {
+            font-size: 24px;
+            color: #1c1e21;
+        }
+
+        .right-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #7e848d;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .login {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .login-form button:hover {
+            background-color: #165fc5;
+        }
+
+        .login-form a {
+            display: block;
+            text-align: center;
+            color: #1877f2;
+            margin: 10px 0;
+            text-decoration: none;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: none;
+            height: 1px;
+            background-color: #dddfe2;
+        }
+
+        .create-account {
+            background-color: #42b72a;
+            color: white;
+            font-size: 16px;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+
+        }
+
+        .create-account:hover {
+            background-color: #36a420;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="left-section">
+                <h1 style="color: burlywood;">Login Page</h1><br><br>
+                <p style="color: lightblue;">Dakshath R | Python Web developer</p>
+                <br><br>
+
+            </div>
+            <div class="right-section" style="background:rgba(255,255,255,0.2); backdrop-filter: blur(10px); border-radius: 15px; border: solid rgba(255,255,255,0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);">
+                <form class="login-form" method="POST">
+                    <input type="email" name="email" placeholder="Email address or phone number" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button class="login" type="submit" style="background-color: darkred;">Log in</button>
+                    <a href="#" style="color: burlywood;">Forgotten password?</a>
+                    <hr>
+
+
+                    <button class="create-account" type="submit" class="btn btn-success" style="padding-left: 40%; padding-right: 40%; padding-top: 2%; padding-bottom: 2%;background-color: darkgreen;"> <a href="/register" style="color: #f0f2f5;"> Register </a></button>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

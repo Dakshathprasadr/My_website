@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <title>Data</title>
+</head>
+
+<body style="padding: 1%;">
+
+
+    <header style="border: transparent; background-color:gray; padding: 50px;">
+        <div class="bt">
+            <h1 style="text-align: center;"> User Data</h1><br><br>
+
+        </div>
+    </header>
+
+    <br><br>
+
+    <div style="padding-bottom: 15%;">
+        <table border="5%" class="table" style="text-align: center;">
+            <thead>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Delete</th>
+
+                {% for d in data_h %}
+            <tbody>
+                <td><b> {{d.id}} </b></td>
+                <td><b> {{d.name}} </b></td>
+                <td>{{d.email}}</td>
+                <td>{{d.password}}</td>
+                <td><a href="/delete/{{d.id}}"><button type="submit" style="background-color: blueviolet; border-color:black; border-radius: 25%; ">delete</button></a></td>
+            </tbody>
+            {% endfor %}
+            </thead>
+        </table>
+    </div>
+
+    <br><br><br><br>
+
+    <footer style="border: transparent; background-color: gray; padding: 30px; text-align: center;">
+
+        <p> </p>
+    </footer>
+
+</body>
+
+</html>
